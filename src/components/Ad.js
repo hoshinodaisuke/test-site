@@ -1,18 +1,13 @@
 import React from 'react';
-import PropTypes from "prop-types";
 
-const Ad = ({ src }) => {
-    const iFrame = '<script src={src}></script>';
+const Ad = () => {
+    const iFrame = '<script src="//ad.daoad.com/fr.js?unid=a9610ffd-e43d-4818-9037-97acaf4110f9"></script>';
 
     return (
         <div className="ad-space">
             <iframe title={"ad"} srcDoc={iFrame}></iframe>
         </div>
     );
-};
-
-Ad.propTypes = {
-    src: PropTypes.string,
 };
 
 export default Ad;
