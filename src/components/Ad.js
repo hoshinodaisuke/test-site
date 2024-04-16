@@ -1,7 +1,8 @@
 import React from 'react';
 
 const Ad = () => {
-    const iFrame = '<script src="//ad.daoad.com/fr.js?unid=a9610ffd-e43d-4818-9037-97acaf4110f9"></script>';
+    // <script src="//dummy/fr.js?unid=a7799aeb-9d11-4a05-9764-dd6d3efb336b"></script>
+    const iFrame = '<script src="//ad.daoad.com/fr.js?unid=a7799aeb-9d11-4a05-9764-dd6d3efb336b"></script>';
 
     return (
         <div className="ad-space">
