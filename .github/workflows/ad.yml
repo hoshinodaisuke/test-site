@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo flag
-        run: echo "${{ needs }}"
+        run: echo "${{ github.ref_type }}"
       - name: set tag to IMAGE_TAG
         id: get_tag
         run: echo "IMAGE_TAG=${GITHUB_REF##*/}" >> $GITHUB_ENV
