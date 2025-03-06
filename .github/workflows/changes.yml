@@ -6,12 +6,10 @@ on:
 jobs:
   changes:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    outputs:
-      frontend: ${{ steps.filter.outputs.frontend }}
-      backend: ${{ steps.filter.outputs.backend }}
-      ad: ${{ steps.filter.outputs.ad }}
-      contract: ${{ steps.filter.outputs.contract }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: echo name
+        run: echo "${{ github.ref.name }}"
   ad:
     needs: changes
     uses: ./.github/workflows/ad.yml
