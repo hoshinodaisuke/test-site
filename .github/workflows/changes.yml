@@ -9,7 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: echo name
-        run: echo "${{ github.ref.name }}"
+        run: |
+          echo "${{ github.event_name }}"
+          echo "${{ github.ref_name }}"
   ad:
     needs: changes
     uses: ./.github/workflows/ad.yml
