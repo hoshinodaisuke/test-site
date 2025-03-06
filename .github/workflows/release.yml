@@ -1,0 +1,19 @@
+name: release
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: set flag
+        id: release_flag
+        run: echo "flag=true" >> $GITHUB_OUTPUT
+      - name: echo flag
+        run: echo "${{ steps.release_flag.outputs.flag }}"
+  ad:
+    needs: release
+    uses: ./.github/workflows/ad.yml
+    secrets: inherit

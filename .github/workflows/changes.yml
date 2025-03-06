@@ -1,0 +1,18 @@
+name: changes
+on:
+  push:
+    branches:
+      - '*'
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      frontend: ${{ steps.filter.outputs.frontend }}
+      backend: ${{ steps.filter.outputs.backend }}
+      ad: ${{ steps.filter.outputs.ad }}
+      contract: ${{ steps.filter.outputs.contract }}
+  ad:
+    needs: changes
+    uses: ./.github/workflows/ad.yml
+    secrets: inherit

@@ -1,0 +1,17 @@
+name: ad
+on: workflow_call
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo flag
+        run: echo "${{ needs.release_flag.outputs.flag }}"
+      - name: set tag to IMAGE_TAG
+        id: get_tag
+        if: needs.release.outputs.flag == 'true'
+        run: echo "IMAGE_TAG=${{ github.ref_name }}" >> $GITHUB_ENV
+      - name: set sha to IMAGE_TAG
+        if: steps.get_tag.conclusion == 'skipped'
+        run: echo "IMAGE_TAG=${{ github.sha }}" >> $GITHUB_ENV
+      - name: echo IMAGE_TAG
+        run: echo "${{ env.IMAGE_TAG }}"
