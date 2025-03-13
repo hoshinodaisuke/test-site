@@ -6,7 +6,7 @@ const Ad = () => {
 
     return (
         <div className="ad-space">
-            <iframe title={"ad"} srcDoc={iFrame}></iframe>
+            <iframe srcDoc="<body style=&quot;margin:0&quot;><script src=&quot;//ad.stg.daoad.com/fr.js?unid=0e6bca0d-9991-4b13-875b-d159c4b1d1ae&quot;></script></body>" width="388" height="92" scrolling="no"></iframe>
         </div>
     );
 };
