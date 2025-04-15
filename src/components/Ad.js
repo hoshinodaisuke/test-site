@@ -6,20 +6,25 @@ const Ad = () => {
 
     return (
       <div className="ad-space">
-        {/* <iframe
+        <iframe
           srcDoc='<body style="margin:0"><script src="//ad.stg.daoad.com/fr.js?unid=0e6bca0d-9991-4b13-875b-d159c4b1d1ae"></script></body>'
           width="388"
           height="92"
           scrolling="no"
-        ></iframe> */}
+        ></iframe>
         {/* <script src="//ad.stg.daoad.com/vd.js?unid=cac80a4b-46ab-41f7-b886-797d99a6218a"></script> */}
         <iframe
           srcDoc='<body style="margin:0"><script src="//ad.stg.daoad.com/vd.js?unid=cac80a4b-46ab-41f7-b886-797d99a6218a"></script></body>'
-          width="388"
-          height="92"
+          width="640"
+          height="480"
           scrolling="no"
         ></iframe>
-        {/* <script src="//ad.stg.daoad.com/vd.js?unid=8f7cae24-575d-4738-ae7b-0fb3fe59afe7"></script> */}
+        <iframe
+          srcDoc='<body style="margin:0"><script src="//ad.stg.daoad.com/vd.js?unid=8f7cae24-575d-4738-ae7b-0fb3fe59afe7"></script></body>'
+          width="640"
+          height="480"
+          scrolling="no"
+        ></iframe>
       </div>
     );
 };
