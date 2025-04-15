@@ -12,7 +12,13 @@ const Ad = () => {
           height="92"
           scrolling="no"
         ></iframe> */}
-        <script src="//ad.stg.daoad.com/vd.js?unid=cac80a4b-46ab-41f7-b886-797d99a6218a"></script>
+        {/* <script src="//ad.stg.daoad.com/vd.js?unid=cac80a4b-46ab-41f7-b886-797d99a6218a"></script> */}
+        <iframe
+          srcDoc='<body style="margin:0"><script src="//ad.stg.daoad.com/vd.js?unid=cac80a4b-46ab-41f7-b886-797d99a6218a"></script></body>'
+          width="388"
+          height="92"
+          scrolling="no"
+        ></iframe>
         {/* <script src="//ad.stg.daoad.com/vd.js?unid=8f7cae24-575d-4738-ae7b-0fb3fe59afe7"></script> */}
       </div>
     );
